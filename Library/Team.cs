@@ -30,6 +30,7 @@ namespace Library
         public Team(string name)
         {
             players= new List<Player>();
+            this.name = name;
         }
 
         /// <summary>
@@ -41,8 +42,8 @@ namespace Library
         /// <returns>True if player has been inserted</returns>
         public bool AddPlayer(Player player)
         {
-            AddPlayer = player;
             return true;
+            this.players.Add(player);
         }
 
         /// <summary>

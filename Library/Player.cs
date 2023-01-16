@@ -15,7 +15,7 @@ namespace Library
         }
         public Player(string name, string surname, ERole role)
         {
-            // TODO P.1
+            
         }
 
         public string Description()
