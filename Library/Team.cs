@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -29,7 +30,6 @@ namespace Library
         public Team(string name)
         {
             players= new List<Player>();
-
         }
 
         /// <summary>
@@ -41,7 +41,8 @@ namespace Library
         /// <returns>True if player has been inserted</returns>
         public bool AddPlayer(Player player)
         {
-            // TODO T.2
+            AddPlayer = player;
+            return true;
         }
 
         /// <summary>
@@ -53,7 +54,8 @@ namespace Library
         /// <returns>True if captain has been setted</returns>
         public bool AddCaptain(Player captain)
         {
-            // TODO T.3
+            AddCaptain = captain;
+            return true;
         }
 
         /// <summary>
@@ -62,7 +64,7 @@ namespace Library
         /// <returns></returns>
         public string GetPlayers()
         {
-            // TODO T.4
+            
         }
 
         public string Name { get { return name; } }
