@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
@@ -42,8 +43,8 @@ namespace Library
         /// <returns>True if player has been inserted</returns>
         public bool AddPlayer(Player player)
         {
-            return true;
             this.players.Add(player);
+            return true;
         }
 
         /// <summary>
@@ -55,7 +56,7 @@ namespace Library
         /// <returns>True if captain has been setted</returns>
         public bool AddCaptain(Player captain)
         {
-            AddCaptain = captain;
+            this.players.Add(captain);
             return true;
         }
 
@@ -65,7 +66,9 @@ namespace Library
         /// <returns></returns>
         public string GetPlayers()
         {
-            
+            GetHashCode();
+            return name;
+            this.players.Clear();
         }
 
         public string Name { get { return name; } }
