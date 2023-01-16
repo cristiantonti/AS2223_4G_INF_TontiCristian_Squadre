@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Security.Cryptography.X509Certificates;
 
 namespace Library
 {
@@ -15,16 +16,18 @@ namespace Library
         }
         public Player(string name, string surname, ERole role)
         {
-            
+            this.name = name;   
+            this.name += " " + surname; 
+            this.role = role;
         }
 
         public string Description()
         {
-            // TODO P.2
+            return { name surname} ;
         }
 
-        public ERole Role { 
-            // TODO P.3
+        public ERole Role {
+            get { return role; }
         }
 
     }
